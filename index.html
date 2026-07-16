@@ -3,54 +3,58 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Алексей | Наставник в IT</title>
-    
-    <!-- Подключаем шрифт -->
+    <title>Анна Иванова | Фотограф</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
-    <!-- Параллельная загрузка CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="card">
-        <div class="avatar-wrapper">
-            <img class="avatar" src="https://i.pravatar.cc/300?img=12" alt="Аватар" />
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">📷 Анна Иванова</div>
+            <nav class="nav">
+                <a href="#">Главная</a>
+                <a href="#gallery">Портфолио</a>
+                <a href="#contact">Контакты</a>
+            </nav>
         </div>
-        
-        <h1>Алексей</h1>
-        <div class="badge">🚀 Наставник для начинающих</div>
-        
-        <ul class="superpowers">
-            <li>🧠 Перевожу с "компьютерного" на человеческий</li>
-            <li>🚀 Помогаю запустить первый проект за вечер</li>
-            <li>❤️ Отвечаю на вопросы, даже глупые</li>
-        </ul>
-        
-        <a href="https://t.me/твой_ник" class="btn-primary">
-            💬 Написать в Telegram
-        </a>
-        
-        <hr class="divider" />
-        
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Имя</label>
-                <input type="text" id="name" placeholder="Как к вам обращаться?" required />
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="example@mail.ru" required />
-            </div>
-            <button type="submit" class="btn-secondary">
-                📩 Получить чек-лист
-            </button>
-        </form>
-        
-        <div class="footer">
-            🔒 Никакого спама. Только полезные материалы.
+    </header>
+
+    <!-- ГЕРОЙ (большое фото) -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Анна Иванова</h1>
+            <p>Фотограф, который видит красоту в деталях</p>
+            <a href="#gallery" class="btn-primary">Смотреть работы</a>
         </div>
-    </div>
-    
-    <!-- Параллельная загрузка JS -->
+    </section>
+
+    <!-- ГАЛЕРЕЯ (сетка с портфолио) -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Мои работы</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://picsum.photos/id/1015/400/300" alt="Фото 1" /></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/1018/400/300" alt="Фото 2" /></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/1019/400/300" alt="Фото 3" /></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/1020/400/300" alt="Фото 4" /></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/1021/400/300" alt="Фото 5" /></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/1022/400/300" alt="Фото 6" /></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Свяжитесь со мной</h2>
+            <p>📧 anna@photo.ru</p>
+            <p>📱 +7 (999) 123-45-67</p>
+            <a href="https://t.me/твой_ник" class="btn-primary">Написать в Telegram</a>
+        </div>
+    </section>
+
     <script src="script.js" defer></script>
 </body>
 </html>
