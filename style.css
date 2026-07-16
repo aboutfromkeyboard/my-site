@@ -1,0 +1,208 @@
+/* --- ОБНУЛЕНИЕ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Креативный градиент */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+/* --- КАРТОЧКА (с неоновым свечением) --- */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-width: 480px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 32px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(100, 100, 255, 0.15);
+    animation: fadeInUp 0.9s ease-out;
+    color: #fff;
+}
+
+/* --- АВАТАР С АНИМАЦИЕЙ --- */
+.avatar-wrapper {
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f093fb, #f5576c, #4facfe);
+    animation: spinGradient 6s linear infinite;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to right, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #c8d6e5;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- СПИСОК СУПЕРСПОСОБНОСТЕЙ --- */
+.superpowers {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 280px;
+    margin: 0 auto 28px;
+}
+
+.superpowers li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #e0e7f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.superpowers li:hover {
+    transform: translateX(6px);
+}
+
+/* --- КНОПКИ --- */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.25s;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(245, 87, 108, 0.3);
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(245, 87, 108, 0.5);
+}
+
+.divider {
+    margin: 28px 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- ФОРМА --- */
+.form-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #c8d6e5;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus {
+    border-color: #f5576c;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(245, 87, 108, 0.1);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.25s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer {
+    margin-top: 24px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- АНИМАЦИИ --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes spinGradient {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* --- АДАПТАЦИЯ --- */
+@media (max-width: 500px) {
+    .card { padding: 30px 20px; }
+    h1 { font-size: 24px; }
+}
