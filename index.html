@@ -3,193 +3,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Алексей — помогаю стартовать в IT</title>
-    <style>
-        /* --- ОБНУЛЕНИЕ И БАЗА --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f8faff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* --- КАРТОЧКА --- */
-        .card {
-            background: white;
-            max-width: 480px;
-            width: 100%;
-            padding: 40px 30px;
-            border-radius: 32px;
-            box-shadow: 0 20px 60px rgba(0, 20, 80, 0.08);
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        /* --- АВАТАР --- */
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 4px solid #eef4ff;
-        }
-
-        h1 {
-            font-size: 26px;
-            font-weight: 700;
-            color: #0b1a33;
-            margin-bottom: 8px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #eef4ff;
-            color: #1a5cff;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 4px 16px;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-
-        p {
-            color: #3a4a6b;
-            line-height: 1.6;
-            font-size: 16px;
-            margin-bottom: 24px;
-        }
-
-        /* --- КНОПКА В TELEGRAM (основная) --- */
-        .btn-primary {
-            display: inline-block;
-            background: #1a5cff;
-            color: white;
-            font-weight: 600;
-            padding: 14px 36px;
-            border-radius: 40px;
-            text-decoration: none;
-            transition: background 0.15s;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .btn-primary:hover {
-            background: #0f47d1;
-        }
-
-        /* --- РАЗДЕЛИТЕЛЬ --- */
-        .divider {
-            margin: 28px 0;
-            border: none;
-            border-top: 1px solid #e6edf9;
-        }
-
-        /* --- ФОРМА --- */
-        .form-group {
-            margin-bottom: 16px;
-            text-align: left;
-        }
-
-        .form-group label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #0b1a33;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e6edf9;
-            border-radius: 16px;
-            font-size: 16px;
-            transition: border 0.15s;
-            outline: none;
-            background: #fafcff;
-        }
-
-        .form-group input:focus {
-            border-color: #1a5cff;
-            background: white;
-        }
-
-        .btn-secondary {
-            background: #0b1a33;
-            color: white;
-            font-weight: 600;
-            padding: 14px;
-            border-radius: 40px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.15s;
-        }
-
-        .btn-secondary:hover {
-            background: #1d2f4a;
-        }
-
-        /* --- ПОДВАЛ --- */
-        .footer {
-            margin-top: 24px;
-            font-size: 14px;
-            color: #8a9bb8;
-        }
-
-        .footer a {
-            color: #1a5cff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- АДАПТАЦИЯ ПОД ТЕЛЕФОН --- */
-        @media (max-width: 500px) {
-            .card {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+    <title>Алексей | Наставник в IT</title>
+    
+    <!-- Подключаем шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <!-- Параллельная загрузка CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
     <div class="card">
-
-        <!-- Аватар (если есть фото — замени ссылку) -->
-        <img class="avatar" src="https://i.pravatar.cc/300?img=12" alt="Аватар" />
-
+        <div class="avatar-wrapper">
+            <img class="avatar" src="https://i.pravatar.cc/300?img=12" alt="Аватар" />
+        </div>
+        
         <h1>Алексей</h1>
         <div class="badge">🚀 Наставник для начинающих</div>
-
-        <p>
-            Помогаю новичкам сделать <strong>первый шаг в IT</strong> —
-            от установки Python до запуска Telegram-бота.
-        </p>
-
-        <!-- ОСНОВНАЯ КНОПКА -->
+        
+        <ul class="superpowers">
+            <li>🧠 Перевожу с "компьютерного" на человеческий</li>
+            <li>🚀 Помогаю запустить первый проект за вечер</li>
+            <li>❤️ Отвечаю на вопросы, даже глупые</li>
+        </ul>
+        
         <a href="https://t.me/твой_ник" class="btn-primary">
             💬 Написать в Telegram
         </a>
-
+        
         <hr class="divider" />
-
-        <!-- ФОРМА ЗАХВАТА (сохраняет email) -->
+        
         <form id="contactForm">
             <div class="form-group">
                 <label for="name">Имя</label>
@@ -203,35 +44,13 @@
                 📩 Получить чек-лист
             </button>
         </form>
-
+        
         <div class="footer">
             🔒 Никакого спама. Только полезные материалы.
         </div>
-
     </div>
-
-    <script>
-        // --- ЛОГИКА ОТПРАВКИ ФОРМЫ (пока просто показывает алерт) ---
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // предотвращаем перезагрузку страницы
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-
-            if (!name || !email) {
-                alert('Пожалуйста, заполните все поля');
-                return;
-            }
-
-            // Здесь ты можешь:
-            // 1. Отправить данные на свой Telegram (через бота)
-            // 2. Сохранить в Google Sheets
-            // 3. Пока просто показать успех
-
-            alert(`Спасибо, ${name}! Чек-лист отправлен на ${email}`);
-            this.reset(); // очищает форму
-        });
-    </script>
-
+    
+    <!-- Параллельная загрузка JS -->
+    <script src="script.js" defer></script>
 </body>
 </html>
